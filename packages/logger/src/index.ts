@@ -1,3 +1,3 @@
-export default function logger(message: string) {
+export default function logger(message: string): void {
   console.log(message);
 }
