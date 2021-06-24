@@ -16,7 +16,7 @@
     "ts-check": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@shared/eslint-config": "^0.0.0",
+    "@shared/eslint-config": "^0.0.1",
     "eslint": "^7.28.0",
     "eslint-config-peggy": "^1.0.10",
     "lint-staged": "^11.0.0",
