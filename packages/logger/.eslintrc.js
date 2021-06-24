@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["peggy"],
+  extends: ['@shared/eslint-config'],
 };

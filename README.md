@@ -18,5 +18,15 @@ refer: https://betterstack.dev/blog/lerna-typescript-monorepo/#heading-bootstrap
 - run `lerna run compile` to compile TypeScript for all packages
 - use `lerna run <cmd>` to execute the script "`<cmd>`" inside each package's package.json
 
-use `lerna add` to install libraries into all packages
- - example: `lerna add lint-staged packages/* --dev`
+- use `lerna add` to install libraries into all packages
+   - example: `lerna add lint-staged packages/* --dev`
+- use `lerna create` to create a new package (sub-repo/sub-project)
+   - example: 
+     ```bash
+     > lerna create eslint-config --yes
+     ```
+- add sharable packages into other packages
+   - example: 
+    ```bash
+     > lerna add @shared/eslint-config  packages/* --dev
+    ```
