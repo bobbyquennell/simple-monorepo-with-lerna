@@ -4,7 +4,10 @@
   "scripts": {
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
-    "prepare": "husky install"
+    "ts-check": "lerna run ts-check --parallel",
+    "prepare": "husky install",
+    "bootstrap": "lerna bootstrap",
+    "setup": "npm install && npm run bootstrap"
   },
   "devDependencies": {
     "husky": "^6.0.0",

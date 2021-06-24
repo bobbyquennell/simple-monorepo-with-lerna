@@ -2,11 +2,13 @@
   "name": "app",
   "version": "1.0.0",
   "scripts": {
+    "precommit": "lint-staged",
     "build": "npm run clean && npm run compile",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
-    "compile": "tsc -b tsconfig.json"
+    "compile": "tsc -b tsconfig.json",
+    "ts-check": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "logger": "1.0.0"
@@ -14,6 +16,7 @@
   "devDependencies": {
     "eslint": "^7.28.0",
     "eslint-config-peggy": "^1.0.10",
+    "lint-staged": "^11.0.0",
     "typescript": "^4.3.2"
   }
 }
