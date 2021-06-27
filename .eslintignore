@@ -4,3 +4,9 @@ node_modules
 dist
 # don't lint nyc coverage output
 coverage
+
+jest.config.js
+fixtures
+shared-fixtures
+
+__snapshots__

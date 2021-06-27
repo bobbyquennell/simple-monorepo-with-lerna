@@ -1,6 +1,6 @@
 const ERROR = 2;
-const basicConig = {
-  root: true
+module.exports = {
+  root: true,
   env: {
     browser: true,
     node: true,
@@ -8,14 +8,13 @@ const basicConig = {
   parserOptions: {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
     sourceType: "module", // Allows for the use of imports,
-    ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX
-    },
+    project: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
+    // allowAutomaticSingleRunInference: true,
+    tsconfigRootDir: __dirname,
+    // warnOnUnsupportedTypeScriptVersion: false,
+    // EXPERIMENTAL_useSourceOfProjectReferenceRedirect: false,
   },
   settings: {
-    // react: {
-    //   version: 'detect' // Tells eslint-plugin-react to automatically detect the version of ReactJS
-    // },
     "import/resolver": {
       node: {
         moduleDirectory: ["node_modules", "src/"],
@@ -23,11 +22,7 @@ const basicConig = {
     },
   },
   // plugins vs extends: https://stackoverflow.com/questions/53189200/whats-the-difference-between-plugins-and-extends-in-eslint
-  // plugins: [
-  //   'react',
-  //   'react-hooks',
-  //   'jsx-a11y'
-  // ],
+  plugins: [],
   extends: [
     "eslint:recommended",
     "plugin:import/errors",
@@ -53,4 +48,3 @@ const basicConig = {
     },
   ],
 };
-module.exports = basicConfig;

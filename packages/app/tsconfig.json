@@ -1,14 +1,16 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "composite": false,
+    "rootDir": "."
   },
   "references": [
-    { "path":  "../logger" }
+    { "path": "../logger/tsconfig.build.json" }
   ],
+  "include": ["src", "tests", "tools"],
   "exclude": [
     "node_modules",
-    "dist"
-  ]
+    "dist",
+    "tests/fixtures"
+  ],
 }

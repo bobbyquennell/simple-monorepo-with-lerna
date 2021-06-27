@@ -2,22 +2,18 @@
   "name": "app",
   "version": "1.0.0",
   "scripts": {
-    "precommit": "lint-staged",
+    "clean": "tsc -b tsconfig.build.json --clean",
+    "format": "prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
+    "lint": "eslint . --ext .js,.ts --ignore-path='../../.eslintignore'",
+    "lint:fix": "eslint . --ext .js,.ts --fix --ignore-path='../../.eslintignore'",
+    "compile": "tsc -b tsconfig.build.json",
     "build": "npm run clean && npm run compile",
-    "lint": "eslint . --ext .js,.ts",
-    "lint:fix": "eslint . --ext .js,.ts --fix",
-    "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo",
-    "compile": "tsc -b tsconfig.json",
     "ts-check": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "logger": "1.0.0"
   },
   "devDependencies": {
-    "@shared/eslint-config": "^0.0.1",
-    "eslint": "^7.28.0",
-    "eslint-config-peggy": "^1.0.10",
-    "lint-staged": "^11.0.0",
     "typescript": "^4.3.2"
   }
 }

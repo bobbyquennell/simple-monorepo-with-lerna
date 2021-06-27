@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     // "composite": true,
     // "outDir": "./dist",
@@ -8,6 +8,9 @@
     // "noImplicitAny": true,
     // "esModuleInterop": true,
     // "lib": [ "es6" ]
+    "types": ["@types/node"],
+    "noEmit": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@shared/*":["shared/*/src"],
