@@ -7,10 +7,10 @@ a simple monorepo using lerna
  ```bash
  > npm run setup
  ```
-## compile the monorepo
+## build the monorepo
  run below cmd in root folder to build all packages
  ```bash
- > lerna run compile
+ > npm run build
  ```
 ## general usage
 - run `lerna bootstrap` to bootstrap dependencies
