@@ -10,8 +10,8 @@
     "bootstrap": "lerna bootstrap",
     "setup": "npm install && npm run bootstrap",
     "build": "lerna run build",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --coverage=false --verbose"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",

@@ -1,6 +1,9 @@
 {
   "name": "app",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "clean": "tsc -b tsconfig.build.json --clean",
     "format": "prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
