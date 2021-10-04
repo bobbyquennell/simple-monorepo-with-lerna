@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "clean": "tsc -b tsconfig.build.json --clean",
-    "format": "prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
+    "format": "../../node_modules/.bin/prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
     "lint": "eslint . --ext .js,.ts --ignore-path='../../.eslintignore'",
     "lint:fix": "eslint . --ext .js,.ts --fix --ignore-path='../../.eslintignore'",
     "compile": "tsc -b tsconfig.build.json",

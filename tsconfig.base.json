@@ -1,8 +1,8 @@
 {
-  /* Basic TS Config in monoerepo root level,
+  /* Basic TS Config in monorepo root level,
    - can be extended from "packages/{packageA}/tsconfig.build.json"
    - can be extended from "root/tsconfig.eslint.json",
-    where we put "paths" aliaes and other "compilerOptions" for test/IDE settings
+    where we put "paths" aliases and other "compilerOptions" for test/IDE settings
    */
    "compilerOptions": {
     "allowSyntheticDefaultImports": true,
